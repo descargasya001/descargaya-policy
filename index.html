@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad – Descarga Ya</title>
+    <meta name="description" content="Política de privacidad y términos de uso de Descarga Ya, la app universal de descarga de contenido digital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F8EFF;
+            --gold: #FFD700;
+            --bg: #08091A;
+            --card: #111428;
+            --border: rgba(255,255,255,0.07);
+            --text: #E8EAFF;
+            --muted: #8890B4;
+            --accent-red: #F87171;
+            --accent-green: #34D399;
+            --accent-purple: #A78BFA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ── Stars / Dot Grid Background ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(79,142,255,0.06) 1px, transparent 1px);
+            background-size: 36px 36px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        /* ── Hero Header ── */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--card), rgba(79,142,255,0.12));
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 10px 24px;
+            margin-bottom: 28px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text);
+            box-shadow: 0 4px 30px rgba(79,142,255,0.12);
+        }
+
+        .logo-badge span.dot { color: var(--gold); }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 40%, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 14px;
+            line-height: 1.15;
+        }
+
+        .hero-sub {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .updated-pill {
+            display: inline-block;
+            background: rgba(79,142,255,0.12);
+            border: 1px solid rgba(79,142,255,0.25);
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 5px 16px;
+            border-radius: 30px;
+        }
+
+        /* ── TOC ── */
+        .toc {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        }
+
+        .toc h2 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .toc ol {
+            padding-left: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+        }
+
+        .toc li a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .toc li a:hover { opacity: 0.75; }
+
+        /* ── Sections ── */
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        h2.section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .section p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .section p:last-child { margin-bottom: 0; }
+
+        .section ul, .section ol {
+            padding-left: 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .section ul li, .section ol li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin: 18px 0;
+            font-size: 0.93rem;
+            font-weight: 500;
+        }
+
+        .highlight-blue {
+            background: rgba(79,142,255,0.1);
+            border: 1px solid rgba(79,142,255,0.2);
+            color: #93C5FD;
+        }
+
+        .highlight-green {
+            background: rgba(52,211,153,0.08);
+            border: 1px solid rgba(52,211,153,0.2);
+            color: #6EE7B7;
+        }
+
+        .highlight-yellow {
+            background: rgba(255,215,0,0.08);
+            border: 1px solid rgba(255,215,0,0.2);
+            color: #FDE68A;
+        }
+
+        .highlight-red {
+            background: rgba(248,113,113,0.08);
+            border: 1px solid rgba(248,113,113,0.2);
+            color: #FCA5A5;
+        }
+
+        /* ── Tag Chips ── */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin: 2px;
+        }
+
+        .tag-green { background: rgba(52,211,153,0.15); color: #34D399; }
+        .tag-red { background: rgba(248,113,113,0.15); color: #F87171; }
+        .tag-blue { background: rgba(79,142,255,0.15); color: #4F8EFF; }
+
+        /* ── Contact Card ── */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(79,142,255,0.12), rgba(167,139,250,0.08));
+            border: 1px solid rgba(79,142,255,0.25);
+            border-radius: 20px;
+            padding: 36px 40px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .contact-card h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p { color: var(--muted); margin-bottom: 20px; }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 13px 30px;
+            border-radius: 50px;
+            transition: opacity 0.2s, transform 0.2s;
+            box-shadow: 0 6px 24px rgba(79,142,255,0.35);
+        }
+
+        .contact-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.82rem;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        footer .brand { color: var(--primary); font-weight: 700; }
+
+        /* ── Glow Top Border on Cards ── */
+        .section:hover {
+            border-color: rgba(79,142,255,0.2);
+            transition: border-color 0.3s;
+        }
+
+        @media (max-width: 600px) {
+            .page-wrap { padding: 36px 16px 80px; }
+            .section { padding: 24px 20px; }
+            .toc ol { grid-template-columns: 1fr; }
+            .contact-card { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- ════ HERO ════ -->
+    <header class="hero">
+        <div class="logo-badge">📥 Descarga<span class="dot"> Ya</span></div>
+        <h1>Política de Privacidad<br>y Términos de Uso</h1>
+        <p class="hero-sub">Transparencia total sobre cómo funciona nuestra aplicación y qué información manejamos.</p>
+        <span class="updated-pill">Última actualización: 01 de Marzo de 2025</span>
+    </header>
+
+    <!-- ════ TOC ════ -->
+    <div class="toc">
+        <h2>📋 Contenido</h2>
+        <ol>
+            <li><a href="#info">Información que recopilamos</a></li>
+            <li><a href="#uso">Cómo usamos la información</a></li>
+            <li><a href="#terceros">Servicios de terceros</a></li>
+            <li><a href="#anuncios">Publicidad</a></li>
+            <li><a href="#contenido">Tipos de contenido</a></li>
+            <li><a href="#compras">Suscripciones y pagos</a></li>
+            <li><a href="#menores">Menores de edad</a></li>
+            <li><a href="#seguridad">Seguridad</a></li>
+            <li><a href="#derechos">Tus derechos</a></li>
+            <li><a href="#cambios">Cambios en la política</a></li>
+        </ol>
+    </div>
+
+    <!-- ════ SECTION 1 ════ -->
+    <div class="section" id="info">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(79,142,255,0.15);">🔍</div>
+            <h2 class="section-title">1. Información que recopilamos</h2>
+        </div>
+        <div class="highlight-green">
+            ✅ Descarga Ya <strong>no recopila, almacena ni vende ningún dato personal identificable</strong> de sus usuarios.
+        </div>
+        <p>La aplicación funciona de forma principalmente local en tu dispositivo. Sin embargo, para ofrecerte ciertas funcionalidades, se generan los siguientes datos anónimos:</p>
+        <ul>
+            <li><strong>ID de instalación anónimo:</strong> Un identificador único y aleatorio generado por Firebase para asociar tus votos en la sección de Comunidad. Este ID no está vinculado a tu nombre, correo o número de teléfono.</li>
+            <li><strong>Datos de suscripción:</strong> Si adquieres una suscripción Premium, RevenueCat procesa el pago a través de Google Play. Solo recibimos confirmación del estado de tu suscripción (activa/inactiva), no datos bancarios.</li>
+            <li><strong>Registros de errores:</strong> Firebase puede recopilar registros de fallos anónimos para ayudarnos a mejorar la estabilidad de la app.</li>
+        </ul>
+    </div>
+
+    <!-- ════ SECTION 2 ════ -->
+    <div class="section" id="uso">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(167,139,250,0.15);">⚙️</div>
+            <h2 class="section-title">2. Cómo usamos la información</h2>
+        </div>
+        <p>El ID anónimo se usa exclusivamente para:</p>
+        <ul>
+            <li>Prevenir votos duplicados en la sección de Comunidad.</li>
+            <li>Verificar el estado de tu suscripción Premium para desbloquear funciones avanzadas.</li>
+        </ul>
+        <p>Nunca utilizamos tus datos para fines publicitarios personalizados directos ni para la venta a terceros.</p>
+    </div>
+
+    <!-- ════ SECTION 3 ════ -->
+    <div class="section" id="terceros">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(52,211,153,0.15);">🔗</div>
+            <h2 class="section-title">3. Servicios de terceros integrados</h2>
+        </div>
+        <p>Descarga Ya integra los siguientes servicios externos, cada uno con su propia política de privacidad:</p>
+        <ul>
+            <li>
+                <strong>Firebase (Google LLC):</strong> Base de datos en tiempo real para la comunidad y autenticación anónima.
+                <a href="https://policies.google.com/privacy" style="color: var(--primary);">Ver política →</a>
+            </li>
+            <li>
+                <strong>Google AdMob:</strong> Servicio de publicidad para usuarios sin suscripción Premium.
+                <a href="https://policies.google.com/privacy" style="color: var(--primary);">Ver política →</a>
+            </li>
+            <li>
+                <strong>RevenueCat:</strong> Gestión de suscripciones y compras dentro de la aplicación.
+                <a href="https://www.revenuecat.com/privacy" style="color: var(--primary);">Ver política →</a>
+            </li>
+        </ul>
+        <div class="highlight-blue">
+            💡 Los sitios web desde los cuales se descarga contenido son externos. Descarga Ya actúa como un agente de descarga del lado del usuario para acceder a información pública disponible en la web.
+        </div>
+    </div>
+
+    <!-- ════ SECTION 4 ════ -->
+    <div class="section" id="anuncios">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(255,215,0,0.15);">📢</div>
+            <h2 class="section-title">4. Publicidad</h2>
+        </div>
+        <p>Los usuarios sin suscripción Premium verán anuncios proporcionados por <strong>Google AdMob</strong>. Estos anuncios pueden usar el identificador publicitario de tu dispositivo (GAID) para mostrarte anuncios relevantes.</p>
+        <p>Puedes controlar o restablecer tu ID publicitario en: <strong>Ajustes de tu Android → Google → Anuncios</strong>.</p>
+        <div class="highlight-yellow">
+            ⭐ Los usuarios Premium no ven ningún tipo de anuncio. La suscripción es la forma de eliminar todos los anuncios completamente.
+        </div>
+    </div>
+
+    <!-- ════ SECTION 5 ════ -->
+    <div class="section" id="contenido">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(248,113,113,0.15);">🌐</div>
+            <h2 class="section-title">5. Tipos de contenido y responsabilidad del usuario</h2>
+        </div>
+        <div class="highlight-red">
+            ⚠️ <strong>Aviso importante:</strong> Descarga Ya es una herramienta de descarga de uso general. El usuario es el único responsable del uso que hace del contenido descargado.
+        </div>
+
+        <p>La aplicación <strong>soporta contenido para adultos</strong> proveniente de sitios de cómics y galerías especializadas. Al instalar esta aplicación, el usuario confirma que:</p>
+        <ul>
+            <li>Es mayor de 18 años.</li>
+            <li>El acceso a contenido adulto es legal en su región o país.</li>
+            <li>No está descargando ni distribuyendo material que infrinja derechos de autor o sea ilegal.</li>
+        </ul>
+
+        <p><strong>Descarga de videos de YouTube:</strong> Debido a los Términos de Servicio de YouTube y las políticas de Google Play Store, la descarga de videos de YouTube puede no estar permitida. La aplicación muestra una advertencia explícita antes de procesar cualquier enlace de YouTube.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;">
+            <span class="tag tag-green">✅ Cómics y viñetas</span>
+            <span class="tag tag-green">✅ Imágenes y galerías</span>
+            <span class="tag tag-green">✅ Contenido para adultos (mayores de 18)</span>
+            <span class="tag tag-blue">⚠️ Videos de plataformas sociales (sujeto a ToS)</span>
+            <span class="tag tag-red">❌ Contenido protegido sin permiso del autor</span>
+        </div>
+    </div>
+
+    <!-- ════ SECTION 6 ════ -->
+    <div class="section" id="compras">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(52,211,153,0.15);">💳</div>
+            <h2 class="section-title">6. Suscripciones y pagos</h2>
+        </div>
+        <p>Descarga Ya ofrece suscripciones Premium procesadas a través de <strong>Google Play</strong>. Al suscribirte:</p>
+        <ul>
+            <li>El cobro se realiza mediante tu cuenta de Google Play.</li>
+            <li>Las suscripciones se renuevan automáticamente al final de cada período, a menos que las canceles con al menos 24 horas de anticipación.</li>
+            <li>Puedes gestionar y cancelar tus suscripciones en: <strong>Google Play → Suscripciones</strong>.</li>
+            <li>No se realizan reembolsos parciales por períodos no utilizados, salvo los casos contemplados por las políticas de Google Play.</li>
+        </ul>
+        <div class="highlight-blue">
+            💡 Descarga Ya también ofrece anuncios recompensados como alternativa gratuita para acceder temporalmente a funciones Ultra Pro sin necesidad de pago.
+        </div>
+    </div>
+
+    <!-- ════ SECTION 7 ════ -->
+    <div class="section" id="menores">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(248,113,113,0.15);">🔞</div>
+            <h2 class="section-title">7. Menores de edad</h2>
+        </div>
+        <p>Esta aplicación está diseñada exclusivamente para <strong>personas mayores de 18 años</strong>. No está dirigida a menores de edad y no recopila intencionalmente información de menores de 13 años.</p>
+        <p>Si tienes conocimiento de que un menor ha utilizado esta aplicación, contáctanos inmediatamente para tomar las medidas correspondientes.</p>
+    </div>
+
+    <!-- ════ SECTION 8 ════ -->
+    <div class="section" id="seguridad">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(79,142,255,0.15);">🔒</div>
+            <h2 class="section-title">8. Seguridad</h2>
+        </div>
+        <p>Tomamos medidas razonables para proteger la información asociada a tu uso de la app:</p>
+        <ul>
+            <li>Las comunicaciones con nuestro servidor back-end se realizan a través de conexiones HTTPS cifradas.</li>
+            <li>Los tokens de autenticación se almacenan de forma segura en el almacenamiento local del dispositivo.</li>
+            <li>Nuestro servidor implementa limitación de tasa (<em>rate limiting</em>) para prevenir ataques de denegación de servicio.</li>
+        </ul>
+    </div>
+
+    <!-- ════ SECTION 9 ════ -->
+    <div class="section" id="derechos">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(167,139,250,0.15);">📋</div>
+            <h2 class="section-title">9. Tus derechos</h2>
+        </div>
+        <p>Como usuario tienes los siguientes derechos sobre tus datos:</p>
+        <ul>
+            <li><strong>Eliminación:</strong> Puedes solicitar la eliminación de tu ID anónimo de la base de datos de comunidad en cualquier momento escribiéndonos.</li>
+            <li><strong>Transparencia:</strong> Puedes solicitar una copia de los escasos datos anónimos asociados a tu ID de instalación.</li>
+            <li><strong>Opt-out de publicidad:</strong> Puedes desactivar los anuncios personalizados desde los ajustes de tu dispositivo Android.</li>
+        </ul>
+    </div>
+
+    <!-- ════ SECTION 10 ════ -->
+    <div class="section" id="cambios">
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(255,215,0,0.15);">🔔</div>
+            <h2 class="section-title">10. Cambios en esta política</h2>
+        </div>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente. Los cambios se publicarán en esta misma página con una nueva fecha de "última actualización".</p>
+        <p>Si los cambios son significativos, también te notificaremos mediante una actualización de la aplicación en Google Play.</p>
+    </div>
+
+    <!-- ════ CONTACT ════ -->
+    <div class="contact-card">
+        <h2>📬 ¿Preguntas o solicitudes?</h2>
+        <p>Si tienes alguna duda sobre esta política o deseas ejercer tus derechos, contáctanos directamente.</p>
+        <a href="https://www.instagram.com/desc.argaya?igsh=YTdwMzB2MXdzaTd4" class="contact-btn" target="_blank">
+            📸 Contáctanos en Instagram
+        </a>
+    </div>
+
+    <!-- ════ FOOTER ════ -->
+    <footer>
+        <p>© 2025 <span class="brand">Descarga Ya</span>. Todos los derechos reservados.</p>
+        <p style="margin-top: 6px;">Esta política aplica únicamente para la aplicación móvil Descarga Ya publicada en Google Play.</p>
+    </footer>
+
+</div>
+</body>
+</html>
